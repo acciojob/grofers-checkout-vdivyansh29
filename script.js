@@ -4,7 +4,22 @@ document.body.appendChild(getSumBtn);
 
 const getSum = () => {
 //Add your code here
-  
+	const prices = element.querySelectorAll(".prices");
+
+	let totalAmount = 0;
+
+	for(let i=0; i<prices.length; i++){
+		totalAmount += parseInt(prices[i].innerText)
+	}
+
+	const row = document.creatElement("tr");
+	const td = document.createElement("td");
+
+	td.innerHTML = `Total Price : ${totalAmount}`
+	td.colSpan = 2
+
+	row.appendChild(td)
+    document.getElementById("fruites-table").appendChild(row)
 };
 
 getSumBtn.addEventListener("click", getSum);
