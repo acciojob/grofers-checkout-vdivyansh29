@@ -1,26 +1,29 @@
-const getSumBtn = document.createElement("button");
-getSumBtn.append("Get Total Price");
-document.body.appendChild(getSumBtn);
+// const getSumBtn = document.createElement("button");
+// getSumBtn.append("Get Total Price");
+// document.body.appendChild(getSumBtn);
 
-const getSum = () => {
-//Add your code here
-	const prices = element.querySelectorAll(".prices");
+// const getSum = () => {
+// //Add your code here
+// 	
+// };
 
-	let totalAmount = 0;
+// getSumBtn.addEventListener("click", getSum);
 
-	for(let i=0; i<prices.length; i++){
-		totalAmount += parseInt(prices[i].innerText)
-	}
+const prices = element.querySelectorAll(".prices");
+let totalAmount = 0;
 
-	const row = document.creatElement("tr");
-	const td = document.createElement("td");
+for(let i=0; i<prices.length; i++){
+	totalAmount += parseInt(prices[i].innerText)
+}
 
-	td.innerHTML = `Total Price : ${totalAmount}`
-	td.colSpan = 2
+const row = document.creatElement("tr");
+const td = document.createElement("td");
 
-	row.appendChild(td)
-    document.getElementById("fruites-table").appendChild(row)
-};
+td.innerHTML = `Total Price : ${totalAmount}`
+td.colSpan = 2
 
-getSumBtn.addEventListener("click", getSum);
+row.appendChild(td)
+document.getElementById("fruites-table").appendChild(row)
+
+
 
